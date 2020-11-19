@@ -33,8 +33,8 @@ public class checkFloorWalls : MonoBehaviour
         {
 
             Debug.Log("debo poner muro");
-            Instantiate(wallObj, transform.position, transform.rotation);
-            
+            //Instantiate(wallObj, transform.position, transform.rotation);
+            //Instantiate(wallObj,,transform.localRotation);
 
 
         }

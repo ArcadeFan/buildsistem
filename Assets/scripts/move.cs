@@ -1,29 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class move : MonoBehaviour
 {
     Vector3 newPosition;
     public bool itsPlaceIt;
+
+
+    public Text imputFieldXF;
+    public Text imputFieldYF;
     
+
+    public GameObject hud;
+
+
     // Start is called before the first frame update
     void Start()
     {
         newPosition = transform.position;
-        
+        hud.SetActive(false);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
+
         if (Input.GetMouseButtonDown(0))
         {
             itsPlaceIt = !itsPlaceIt;
 
 
         }
+
+        
+
 
         RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -34,12 +50,13 @@ public class move : MonoBehaviour
             {
                 if (hit.transform.name == transform.name)
                 {
-                    print("My object is clicked by mouse");
 
-                    newPosition = new Vector3(hit.point.x, 0.5f, hit.point.z);
-                    
+                    hud.SetActive(true);
 
-                    //transform.position = newPosition;
+                    newPosition = new Vector3(hit.point.x,transform.localScale.y/2, hit.point.z);
+
+
+                    transform.position = newPosition;
 
                 }
 
@@ -52,9 +69,30 @@ public class move : MonoBehaviour
     {
 
 
-        itsPlaceIt = !itsPlaceIt;
+        //itsPlaceIt = !itsPlaceIt;
 
 
+    }
+
+    public void move_obj()
+    {
+
+    }
+
+
+
+    public void Modify_Door()
+    {
+
+        transform.localScale = new Vector3(int.Parse(imputFieldXF.text), int.Parse(imputFieldYF.text), 1);
+        hud.SetActive(false);
+    }
+
+    public void cancel_action()
+    {
+
+        itsPlaceIt = true;
+        hud.SetActive(false);
     }
 
 

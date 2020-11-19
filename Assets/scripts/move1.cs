@@ -14,7 +14,10 @@ public class move1 : MonoBehaviour
     void Start()
     {
         newPosition = transform.position;
-        transform.localScale = sizeD;
+
+
+
+        
 
 
 
@@ -44,7 +47,7 @@ public class move1 : MonoBehaviour
                     newPosition = new Vector3(hit.point.x, 0.5f, hit.point.z);
                     
 
-                    //transform.position = newPosition;
+                    transform.position = newPosition;
 
                 }
 
