@@ -56,14 +56,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\move1.cs" />
+    <Compile Include="Assets\scripts\sctruc.cs" />
     <Compile Include="Assets\scripts\checkFloorWalls.cs" />
+    <Compile Include="Assets\scripts\cubo.cs" />
     <Compile Include="Assets\scripts\move.cs" />
     <Compile Include="Assets\scripts\drag.cs" />
+    <Compile Include="Assets\scripts\save_struc.cs" />
+    <Compile Include="Assets\scripts\load_stru.cs" />
     <Compile Include="Assets\scripts\mouse.cs" />
-    <Compile Include="Assets\scripts\create.cs" />
+    <Compile Include="Assets\scripts\mueble.cs" />
+    <Compile Include="Assets\scripts\save.cs" />
     <Compile Include="Assets\scripts\door.cs" />
+    <Compile Include="Assets\scripts\create.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\JsonDotNet\link.xml" />
+     <None Include="Assets\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll" />
+     <None Include="Assets\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.dll" />
+     <None Include="Assets\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.dll" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -252,6 +265,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.6f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.6f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

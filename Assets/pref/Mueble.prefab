@@ -1137,6 +1137,7 @@ GameObject:
   - component: {fileID: 529995066992879255}
   - component: {fileID: 529995066992879254}
   - component: {fileID: 529995066992879249}
+  - component: {fileID: -8544718116826385952}
   m_Layer: 0
   m_Name: Mueble
   m_TagString: Untagged
@@ -1237,3 +1238,17 @@ MonoBehaviour:
   imputFieldXF: {fileID: 528888508}
   imputFieldYF: {fileID: 2100327753}
   hud: {fileID: 1347559222}
+--- !u!114 &-8544718116826385952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529995066992879248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3de132c57a9b54abbe60fca3a5f70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: {fileID: 0}
+  wallobj: {fileID: 0}

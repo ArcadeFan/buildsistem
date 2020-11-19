@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +39,8 @@ public class create : MonoBehaviour
     public int ysize;
 
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,8 +53,9 @@ public class create : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+       
+        
 
 
     }
@@ -91,9 +95,9 @@ public class create : MonoBehaviour
                 
 
 
-                GameObject go = Instantiate(floor, new Vector3(x * 1, 0, z * 1), Quaternion.identity);
+                GameObject go = Instantiate(floor, new Vector3(x * 1, transform.localScale.y / 2, z * 1), Quaternion.identity);
 
-                GameObject wa2 = Instantiate(wallobj, new Vector3(-0.5f, 0, z), Quaternion.identity);
+                GameObject wa2 = Instantiate(wallobj, new Vector3(-0.5f, transform.localScale.y / 2, z), Quaternion.identity);
                 wa2.transform.localScale = new Vector3(1, int.Parse(imputFieldZ.text), 1);
                 GameObject wa3 = Instantiate(wallobj, new Vector3(int.Parse(imputFieldX.text), 0, z), Quaternion.identity);
                 wa3.transform.localScale = new Vector3(1, int.Parse(imputFieldZ.text), 1);

@@ -38,7 +38,17 @@ public class move : MonoBehaviour
 
         }
 
-        
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+
+
+            transform.rotation = Quaternion.Euler(0, 90, 0) ;
+
+        }
+
+
+
 
 
         RaycastHit hit;
